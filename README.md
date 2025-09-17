@@ -1,4 +1,4 @@
-# <img src=../../../../images/computer.png width="40"> Code, Learn & Practice(Programación de Servicios y Procesos: "Concurrencia, procesos e hilos")
+# Creación y uso de elementos básicos en php
 
 ## Bloque 1: Conceptos básicos (introducción a php)
 
@@ -12,15 +12,15 @@
     $num1 = readline("Introduce el primer número: ");
     $num2 = readline("Introduce el segundo número: ");
 
-    $resutTxt = "Los numeros $num1 y $num2 son iguales\n";
+    $resultTxt = "Los numeros $num1 y $num2 son iguales\n";
 
     if ($num1 < $num2) {
-        $resutTxt = "El numero mayor es $num2\n";
+        $resultTxt = "El numero mayor es $num2\n";
     } elseif ($num1 > $num2) {
-        $resutTxt = "El numero mayor es $num1\n";
+        $resultTxt = "El numero mayor es $num1\n";
     }
 
-    echo $resutTxt
+    echo $resultTxt
 
     ?>
     ```
@@ -32,12 +32,58 @@
 
     ```php
     <?php
-    $edad = readline("Cuantos años tienes? ");
+    $age = readline("Cuantos años tienes? ");
 
-    if ($edad < 18) {
+    if ($age < 18) {
         echo "Eres menor de edad\n";
     } else {
         echo "Eres mayor de edad\n";
     }
+
     ?>
     ```
+
+3. **Positivo, negativo o cero**  
+   Comprueba si un número almacenado en una variable es positivo, negativo o cero.  
+
+    ```php
+    <?php
+
+    $num = 12;
+
+    $resultTxt = "El numero es cero\n";
+
+    if ($num < 0) {
+        $resultTxt = "El numero $num es negativo\n";
+    }elseif ($num > 0) {
+        $resultTxt = "El numero $num es positivo\n";
+    }
+
+    echo $resultTxt;
+
+    ?>
+    ```
+
+4. **Nota final**  
+   Pide la nota de un alumno y muestra:  
+   - `"Suspenso"` (< 5), `"Aprobado"` (5–6), `"Notable"` (7–8), `"Sobresaliente"` (9–10).  
+
+    ```php
+    <?php
+
+    $grade = readline("Cual fue su nota? ");
+
+    if ($grade >= 9) {
+        echo "Sobresaliente\n";
+    } elseif ($grade >= 7) {
+        echo "Notable\n";
+    } elseif ($grade >= 5) {
+        echo "Aprobado\n";
+    } else {
+        echo "Suspenso\n";
+    }
+
+    ?>
+    ```
+
+---
