@@ -87,3 +87,37 @@
     ```
 
 ---
+
+### Bucles (for, while, foreach)
+
+5. **Contar del 1 al 100**  
+   Muestra los números del 1 al 100 en pantalla.  
+
+    ```php
+    <?php
+
+    for ($i = 1; $i <= 100; $i++) {
+        echo "$i ";
+    }
+
+    echo "\n";
+
+    ?>
+    ```
+
+6. **Suma acumulada**  
+   Calcula la suma de los números del 1 al 50 usando un bucle.
+
+   ```php
+    <?php
+
+    $sum = 0;
+
+    for($i = 1; $i <= 50; $i++) {
+        $sum += $i;
+    }
+
+    echo "$sum\n";
+
+    ?>
+    ```
