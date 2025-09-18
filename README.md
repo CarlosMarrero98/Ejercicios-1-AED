@@ -215,4 +215,158 @@
 
     ?>>
     ```
-    
+
+12. **Fibonacci**  
+    Genera los primeros 20 términos de la secuencia de Fibonacci.
+
+    ```php
+    <?php
+    $prev = 0;
+    $current = 1;
+
+    for($i = 1; $i <= 20; $i++) {
+        if ($i == 1) {
+            echo "$prev ";
+        }elseif ($i == 2) {
+            echo "$current ";
+        }else {
+            $next = $prev + $current;
+            echo "$next ";
+            $prev = $current;
+            $current = $next;
+        }
+    }
+
+    echo "\n";
+    ?>
+    ```
+13. **Múltiplos de un número**  
+    Pide un número `n` y muestra sus múltiplos hasta 100.  
+
+    ```php
+    <?php
+
+    $num = readline("Escribe un numero ");
+
+    for ($i = 0; $i *$num <= 100; $i++) {
+        $multiplo = $i* $num;
+        echo "$multiplo ";
+    }
+
+    echo "\n";
+    ?>
+    ```
+
+14. **Suma de pares e impares**  
+    Calcula la suma de los números pares e impares entre 1 y 100 por separado.  
+
+    ```php
+    <?php
+
+    $sumPar = 0;
+    $sumImpr = 0;
+
+    for($i = 0; $i <= 100; $i++) {
+        if($i % 2 == 0) {
+            $sumPar = $sumPar + $i;
+        }else {
+            $sumImpr = $sumImpr + $i;
+        }
+    }
+    echo "La suma de los numeros pares es $sumPar\n";
+    echo "La suma de los numeros inpares es $sumImpr\n";
+    ?>
+    ```
+15. **Adivinar número**  
+    Genera un número aleatorio entre 1 y 20.  
+    Pide al usuario que lo adivine y usa un bucle con condicionales para dar pistas: `"Mayor"` o `"Menor"`.  
+
+    ```php
+    <?php
+    $numRand = rand(1, 20);
+
+    do {
+        $intento = readline("Introduce tu número: ");
+
+        if ($intento < $numRand) {
+            echo "Mayor\n";
+        } elseif ($intento > $numRand) {
+            echo "Menor\n";
+        } else {
+            echo "¡Correcto! El número era $numRand\n";
+        }
+
+    } while ($intento != $numRand);
+    ?>
+    ```
+
+---
+
+### Construcción de Algorítmicos
+
+16. **Número perfecto**  
+    Comprueba si un número es perfecto (la suma de sus divisores propios es igual al número).  
+
+    ```php
+    <?php
+
+    $num = readline("Introduce un numero: ");
+
+    $sum = 0;
+    for ($i = 1; $i < $num; $i++) {
+        if ($num % $i == 0) {
+            $sum += $i;
+        }
+    }
+
+    if ($sum == $num) {
+        echo "El $num es un numero perfecto\n";
+    } else {
+        echo "El $num no es un numero perfecto\n";
+    }
+    ?>
+    ```
+
+17. **Invertir número**  
+    Escribe un algoritmo que invierta los dígitos de un número (ejemplo: `123 → 321`).
+
+    ```php
+    <?php
+
+    $num = readline("Introduce un numero: ");
+    $invertido = 0;
+
+    while ($num > 0) {
+        $digito = $num % 10;
+        $invertido = $invertido * 10 + $digito;
+        $num = (int) ($num / 10);
+    }
+
+    echo "Numero invertido: $invertido\n";
+    ?>
+    ```
+
+18. **Palíndromo**  
+    Comprueba si una palabra almacenada en una variable es palíndroma.  
+
+    ```php
+    <?php
+
+    $palabra = readline("Introduce una palabra: ");
+    $longitud = strlen($palabra) - 1;
+    $esPalindromo = true;
+
+    for ($i = 0; $i < $longitud / 2; $i++) {
+        if ($palabra[$i] != $palabra[$longitud - $i]) {
+            $esPalindromo = false;
+            break;
+        }
+    }
+
+    if ($esPalindromo) {
+        echo "La palabra '$palabra' es un palindromo\n";
+    } else {
+        echo "La palabra '$palabra' no es un palindromo\n";
+    }
+    ?>
+    ```
