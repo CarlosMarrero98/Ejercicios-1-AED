@@ -370,3 +370,52 @@
     }
     ?>
     ```
+19. **Máximo común divisor (MCD)**  
+    Escribe un algoritmo que calcule el MCD de dos números.  
+
+    ```php
+    <?php
+
+    $num1 = readline("Escribe un numero ");
+    $num2 = readline("Escribe un numero ");
+
+    $menor = min($num1, $num2);
+    $mcd = 1;
+
+    for($i = 1; $i <= $menor; $i++) {
+        if($num1 % $i == 0 && $num2 % $i == 0) {
+            $mcd = $i;
+        }
+    }
+
+    echo "El MCD de $num1 y $num2 es $mcd\n";
+    ?>
+    ```
+
+20. **Triángulo de asteriscos**  
+    Muestra en pantalla un triángulo de altura `n` usando `*`.  
+    Ejemplo con `n = 5`:  
+
+    ```bash
+    *
+    **
+    ***
+    ****
+    *****
+    ```
+
+    ```php
+    <?php
+
+    $n = readline("Introduce la altura del triangulo: ");
+
+    for ($i = 1; $i <= $n; $i++) {
+        for ($j = 1; $j <= $i; $j++) {
+            echo "*";
+        }
+        echo "\n";
+    }
+    ?>
+    ```
+
+---
