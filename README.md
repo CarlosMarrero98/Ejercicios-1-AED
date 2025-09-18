@@ -121,3 +121,75 @@
 
     ?>
     ```
+
+7. **Tabla de multiplicar**  
+   Pide un número y genera su tabla de multiplicar del 1 al 10.
+
+    ```php
+    <?php
+
+    $num = readline("Pon un numero ");
+
+    for($i = 1; $i <= 10; $i++) {
+        $mult = $i * $num;
+        echo "$i X $num = $mult\n";
+    }
+
+    ?>
+    ```
+
+8. **Números pares**  
+   Muestra todos los números pares entre 1 y 50.  
+
+    ```php
+    <?php
+
+    for($i = 0; $i <= 50; $i+=2) {
+        echo "$i ";
+    }
+
+    echo "\n";
+
+    ?>
+    ```
+
+9. **Cuenta atrás**  
+   Haz un bucle que cuente de 10 a 1 y luego muestre `"¡Fin!"`.
+
+   ```php
+   <?php
+
+    for($i = 10; $i > 0; $i--) {
+        echo "$i\n";
+    }
+
+    echo "¡Fin!\n";
+
+    ?>
+    ```
+
+10. **Factorial**  
+    Calcula el factorial de un número introducido (ejemplo: `5! = 120`).  
+
+    ```php
+    <?php
+
+    $num = readline("Escribe un numero ");
+    $factorial = 1;
+
+    for($i = $num; $i > 0; $i--) {
+        $factorial *= $i;
+    }
+
+    echo "El factorial de $num es $factorial\n";
+    ?>
+    ```
+
+---
+
+### 3️⃣ Combinando Condicionales y Bucles
+
+11. **Números primos**  
+    Escribe un algoritmo que muestre los números primos entre 1 y 50.  
+
+    ```php
